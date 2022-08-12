@@ -27,11 +27,10 @@ for(let i = 0; i < switchDeColor.length; i++) {
 
 
 //Funcion para agregar una cancion en el index
-let btnEnviar = document.getElementById("btnEnviar");
-let canciones = [];
+let contador = 0;
 
 function agregarRecomendacion() {
-    let contador = canciones.length;
+    console.log(contador)
     let ulPadre = document.getElementById("listaReco");
     let liPadre = document.getElementsByClassName("reco-usuario");
     let cancion = document.getElementById("cancion").value;
@@ -45,35 +44,21 @@ function agregarRecomendacion() {
     //Creacion del elemento a
     let linkNuevo = document.createElement("a");
 
-    //Creacion de la clase que contiene la info de las canciones
-    class Cancion{
-        constructor(cancion, banda, link) {
-            this.cancion = cancion;
-            this.banda = banda;
-            this.link = link;
-        }
-    }
-    let reco = new Cancion(cancion, banda, link);
     
     //Agregar el elemento li al html
     ulPadre.appendChild(itemLista); 
     
     //Definir el contenido del elemento a con sus atributos
-    linkNuevo.innerHTML = `${reco.banda} - ${reco.cancion}`;
-    linkNuevo.setAttribute("href", `${reco.link}`);
+    linkNuevo.innerHTML = `${banda} - ${cancion}`;
+    linkNuevo.setAttribute("href", `${link}`);
     linkNuevo.setAttribute("target", "_blank");
 
     //Define 10 elementos, agrega a la lista y borra el primero
-    if(canciones.length <= 9) {
+    if(contador <= 9) {
         liPadre[contador].appendChild(linkNuevo);
-        canciones.push(reco);
-        
+        contador += 1;
     } else {
-        canciones.shift();
-        canciones.push(reco);
         liPadre[0].remove();
         liPadre[9].appendChild(linkNuevo);
     }
-
-
 }
