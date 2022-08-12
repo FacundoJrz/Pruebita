@@ -113,22 +113,28 @@
     <div class="container">
       <h2>Ayudanos con nuestra libreria!</h2>
       <p><i>Dejanos tus recomendaciones...</i></p>
-      <form>
+      <form">
         <div class="mb-3">
-          <label for="exampleInputtext2" class="form-label">Banda</label>
-          <input type="text" class="form-control" id="exampleInputtext2" placeholder="Ingrese nombre de la banda">
+          <label for="banda" class="form-label">Banda</label>
+          <input type="text" class="form-control" id="banda" placeholder="Ingrese nombre de la banda">
         </div>
         <div class="mb-3">
-          <label for="exampleInputtext3" class="form-label">Cancion</label>
-          <input type="text" class="form-control" id="exampleInputtext3" placeholder="Ingrese nombre de la cancion">
+          <label for="cancion" class="form-label">Cancion</label>
+          <input type="text" class="form-control" id="cancion" placeholder="Ingrese nombre de la cancion">
         </div>
         <div class="mb-3">
-          <label for="exampleInputtext4" class="form-label">Link</label>
-          <input type="text" class="form-control" id="exampleInputtext4" placeholder="Ingrese enlace a youtube">
+          <label for="link" class="form-label">Link</label>
+          <input type="text" class="form-control" id="link" placeholder="Ingrese enlace a youtube">
         </div>
-        <button type="submit" class="btn btn-primary">  Enviar Recomendación </a> </button>
+        <button type="button" class="btn btn-primary" id="btnEnviar" onclick="agregarRecomendacion()">Enviar Recomendación</button>
       </form>
     </div>
+  </section>
+  <div class="colorSwitch bg-dark text-light">
+    <h2 class="h2 my-0 d-flex justify-content-center p-4">Recomendaciones de usuarios</h2>
+  <section class="colorSwitch bg-light pb-4" id="secReco">
+    <ul id="listaReco">
+    </ul>
   </section>
   <!--Tercer Seccion-->
   <div class="colorSwitch bg-dark text-light">
