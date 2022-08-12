@@ -24,7 +24,6 @@
 }
 .link-nav-foo {
     border-radius: 5px;
-    padding: 0 2rem;
     transition: box-shadow 0.2s ease;
 }
 .link-nav-foo:hover {

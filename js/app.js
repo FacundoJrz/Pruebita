@@ -19,12 +19,9 @@ for(let i = 0; i < switchDeColor.length; i++) {
         switchDeColor[i].classList.remove("navbar-dark");
         switchDeColor[i].classList.add("bg-light");
         switchDeColor[i].classList.add("text-dark");
-
     }
 }
-
 }
-
 
 //Funcion para agregar una cancion en el index
 let contador = 0;
@@ -61,4 +58,18 @@ function agregarRecomendacion() {
         liPadre[0].remove();
         liPadre[9].appendChild(linkNuevo);
     }
+}
+
+//Funcion para encontrar banda aleatoria
+
+function bandaAleatoria() {
+    let bandas = ["Generos/Blues/B.B. King.html", "Generos/Blues/Buddy guy.html", "Generos/Blues/Eric Clapton.html", "Generos/Blues/Nina Simone.html", "Generos/Pop/Britney Spears.html", "Generos/Pop/Madonna.html", "Generos/Pop/Bruno Mars.html", "Generos/Pop/Michael Jackson.html", "Generos/Rock/Led-Zeppelin.html", "Generos/Rock/Pink-Floyd.html", "Generos/Rock/Queen.html", "Generos/Rock/The-beatles.html"];
+
+    let nroAleatorio = Math.floor(Math.random() * 12);
+
+
+    let boton = document.getElementById("bandaAleatoria");
+
+    boton.setAttribute("href", bandas[nroAleatorio])
+
 }
