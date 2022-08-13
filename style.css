@@ -45,3 +45,12 @@
 #mainBruno {
     padding: auto 0;
 }
+.imgRedes{
+    width: 100px;
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .imgRedes {
+        width: 55px;
+    }
+
+}
