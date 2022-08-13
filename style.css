@@ -33,6 +33,9 @@
 .mt-6{
     margin-top: 78px;
 } 
+.py-6 {
+    padding: 4rem 0;
+}
 
 .reco-usuario {
     font-size: 20px;
